@@ -99,25 +99,30 @@ class RestController extends Controller
      *     name="addressline1",
      *     in="body",
      *     type="string",
-     *     description="address line 1 of Property"
+     *     description="address line 1 of Property",
+     *     @SWG\Schema(type="string")
      * )
      * @SWG\Parameter(
      *     name="addressline2",
      *     in="body",
      *     type="string",
-     *     description="(* Not Mandatory)address line 2 of Property"
+     *     description="(* Not Mandatory)address line 2 of Property",
+     *     @SWG\Schema(type="string")
      * )
      * @SWG\Parameter(
      *     name="city",
      *     in="body",
      *     type="string",
-     *     description="(* Not Mandatory), city"
+     *     description="(* Not Mandatory), city",
+     *     @SWG\Schema(type="string")
      * )
      * @SWG\Parameter(
      *     name="postcode",
      *     in="body",
      *     type="string",
-     *     description="(* Not Mandatory) postcode"
+     *     description="(* Not Mandatory) postcode",
+     *     @SWG\Schema(type="string")
+     * )
      * )
      */
     public function add(Request $request)
