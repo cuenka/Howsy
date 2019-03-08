@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello Howsy!{% endblock %}
+
+{% block body %}
+    <div class="m-4">
+        <h1 class="h1">List property</h1>
+        <div>
+
+            <div class="form-group">
+                <label for="field">Select field</label>
+                <select class="key-up form-control" id="field">
+                    <option value="addressline1" selected>Address</option>
+                    <option value="city">City</option>
+                    <option value="postcode">Postcode</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="term">Term</label>
+                <input type="text" class="key-up form-control" id="term" placeholder="term to search">
+            </div>
+        </div>
+        <p>
+            <button class="btn-outline-dark btn howsy-ajax-call mr-2"
+                    data-method="POST"
+                    data-body='{"address":"big ben"}'
+                    data-endpoint="{{ path('rest_list_property') }}">Find Property
+            </button>
+            <a class="btn btn-outline-success ml-3" href="{{ path('dashboard') }}">Go Back</a>
+
+        </p>
+        <h3 class="h3">Response</h3>
+
+        <div class="row m-4">
+            <section class="api__result">
+                <div class="api__result__status"></div>
+                <div class="api__result__data"></div>
+            </section>
+        </div>
+    </div>
+{% endblock %}

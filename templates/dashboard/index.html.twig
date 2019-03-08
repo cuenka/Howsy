@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello Howsy!{% endblock %}
+
+{% block body %}
+    <h3>Test is divided in 2 sections, consumer and provider</h3>
+    <p> I created a resful API that do the CRUD of companies/employees.</p>
+    <p>2 entities, Company and employee where 1 company has +1 employees</p>
+    <p>You can check documentation and test api here:</p>
+    <a class="btn btn-info" href="{{ path('app.swagger_ui') }}">Documentation</a>
+    <p>Test tasks</p>
+    <p>
+        <a class="btn btn-outline-primary" href="{{ path('dashboard_list_all') }}">List all properties</a>
+        <a class="btn btn-outline-secondary" href="{{ path('dashboard_list_property') }}">Retrieve a specific property</a>
+        <a class="btn btn-outline-success" href="{{ path('dashboard_list_add') }}">Add a property</a>
+    </p>
+   <h3 class="h3">Responses</h3>
+
+
+{% endblock %}

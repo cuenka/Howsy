@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello Howsy!{% endblock %}
+
+{% block body %}
+    <div class="m-4">
+        <h1 class="h1">List all properties</h1>
+        <p>
+            <button class="btn-outline-dark btn howsy-ajax-call mr-2"
+                    data-method="GET"
+                    data-body=''
+                    data-endpoint="{{ path('rest_list_all') }}">Get all
+            </button>
+            <a class="btn btn-outline-success ml-3" href="{{ path('dashboard') }}">Go Back</a>
+
+        </p>
+        <h3 class="h3">Response</h3>
+
+        <div class="row m-4">
+            <section class="api__result">
+                <div class="api__result__status"></div>
+                <div class="api__result__data"></div>
+            </section>
+        </div>
+    </div>
+{% endblock %}
